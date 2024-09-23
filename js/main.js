@@ -4,10 +4,12 @@ $(document).ready(function () {
     $(".sidebar-block .accordion-menu .btn-toggle-accordion").removeClass('isOpen')
     $(".sidebar-block .accordion-menu .body-accordion").slideUp()
   })
-  $(".select-list-style a").on('click', function () {
-    $(".select-list-style a").removeClass('active')
-    $(this).addClass('active')
-  })
+
+  launch_notification = () => {
+    let notification = document.getElementById("toast")
+    notification.className = "show";
+    setTimeout(() => { notification.className = notification.className.replace("show", ""); }, 4000);
+  }
 
   $(document).on('click', ".sidebar-block:not(.closed) .accordion-menu .btn-toggle-accordion", function () {
     $(this).toggleClass('isOpen')
@@ -19,12 +21,11 @@ $(document).ready(function () {
     $(this).next().slideToggle()
   })
 
-  $(".sidebar-block:not(.closed) .accordion-menu .btn-toggle-accordion").on('click', function () {
-    // $(".select-list-style a").removeClass('active')
-
-
+  $(".client_id").on('click', function () {
+    $("#copy-text-input").select();
+    document.execCommand("copy");
+    launch_notification()
   })
-
 
   $("#imageUpload").change(function (data) {
 
