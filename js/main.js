@@ -22,7 +22,8 @@ $(document).ready(function () {
   })
 
   $(".client_id").on('click', function () {
-    $("#copy-text-input").select();
+    $(this).find("#copy-text-input").select()
+    // $("#copy-text-input").select();
     document.execCommand("copy");
     launch_notification()
   })
