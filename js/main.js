@@ -63,7 +63,7 @@ $(document).ready(function () {
   });
 
   $(".imgAdd").click(function () {
-    $(this).closest(".row").find('.imgAdd').before('<div class="col-xl-2 col-lg-3 col-sm-4 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
+    $(this).closest(".row").find('.imgAdd').before('<div class="col-xl-2 col-lg-3 col-sm-4 col-6 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
   });
   $(document).on("click", "i.del", function () {
     // 	to remove card
@@ -90,7 +90,7 @@ $(document).ready(function () {
     });
   });
 
-  $('a.btn-custom.btn-warning').trigger('click')
+  // $('a.btn-custom.btn-warning').trigger('click')
 
 
 })
