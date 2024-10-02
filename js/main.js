@@ -90,7 +90,7 @@ $(document).ready(function () {
     });
   });
 
-  $('#kkkk').trigger('click')
+  // $('a.btn-custom.btn-warning').trigger('click')
 
   $('.select_2').select2();
 
