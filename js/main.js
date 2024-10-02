@@ -90,8 +90,19 @@ $(document).ready(function () {
     });
   });
 
-  // $('a.btn-custom.btn-warning').trigger('click')
+  $('#kkkk').trigger('click')
 
+  $('.select_2').select2();
+
+  $("[data-fancybox]").fancybox({
+    youtube: {
+      controls: 1,
+      showinfo: 1,
+    },
+    vimeo: {
+      color: "f00",
+    },
+  });
 
 })
 
@@ -113,42 +124,10 @@ $(document).ready(function () {
   });
 
 
-  $("[data-fancybox]").fancybox({
-    youtube: {
-      controls: 1,
-      showinfo: 1,
-    },
-    vimeo: {
-      color: "f00",
-    },
-  });
-
-
-
-  $(document).on("click", ".toggle_password span", function () {
-    $(this).parent().toggleClass("show");
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  });
 
   $(document).on("click", ".mobile__menu .close", function () {
     $(".mobile__menu").removeClass("active");
     $("body").removeClass("opened");
   });
 
-  if ($(window).width() < 1024) {
-    $("section.home_faculty .right__faculty .swiper-container").after(
-      $("section.home_faculty .all_faculty ")
-    );
-  }
-
-  $(document).on("click", ".home_faculty ul li a", function (e) {
-    e.preventDefault();
-    $(".home_faculty ul li a").removeClass("active");
-    $(this).addClass("active");
-  });
 });
