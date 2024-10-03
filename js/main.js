@@ -90,9 +90,18 @@ $(document).ready(function () {
     });
   });
 
-  // $('a.btn-custom.btn-warning').trigger('click')
+  // $('.technopa-item .actions a').trigger('click')
 
-  $('.select_2').select2();
+  $(".uploadFile").change(function() {
+    filename = this.files[0].name;
+    $('.nameUploadFile').text(filename)
+    console.log(filename);
+  });
+
+
+  if($('.select_2')){
+    $('.select_2').select2();
+  }
 
   $("[data-fancybox]").fancybox({
     youtube: {
